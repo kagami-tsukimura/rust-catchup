@@ -61,4 +61,5 @@ pub fn run() {
     *y1_ptr = -5;
     println!("Stack address of x1, y1 is: {:p}, {:p}", &x1_ptr, &y1_ptr);
     println!("The value 'x1_ptr' = {}, 'y1_ptr' = {}", *x1_ptr, *y1_ptr);
+    println!("{:?}", t2);
 }
