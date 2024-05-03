@@ -104,8 +104,22 @@ cargo new <環境名>
 
 ### 実行
 
+- build & run
+
 ```bash
 cargo run
+```
+
+- build only
+
+```bash
+cargo build
+```
+
+- compile check
+
+```bash
+cargo check
 ```
 
 </details>
