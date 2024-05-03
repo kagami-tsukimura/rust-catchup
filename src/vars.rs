@@ -61,6 +61,7 @@ pub fn run() {
     *y1_ptr = -5;
     println!("Stack address of x1, y1 is: {:p}, {:p}", &x1_ptr, &y1_ptr);
     println!("The value 'x1_ptr' = {}, 'y1_ptr' = {}", *x1_ptr, *y1_ptr);
+    // 複雑な型は{:?}を使う
     println!("{:?}", t2);
 
     // 配列(サイズ(要素数)はコンパイル時に決定)
@@ -69,4 +70,6 @@ pub fn run() {
     let a2: [i32; 5] = [3; 5];
     println!("The value 'a1' = {:?}", a1);
     println!("The value 'a2' = {:?}", a2);
+    // 各要素にアクセス
+    println!("The value 'a1[0]' = {}, 'a2[2]' = {}", a1[0], a2[2]);
 }
