@@ -22,4 +22,10 @@ pub fn run() {
     println!("{}", usize::BITS);
     // {:p}:ポインタ形式でメモリアドレスを表示
     println!("Memory address of const is: {:p}", &MAX_POINTS);
+
+    // 変数の領域（異なるアドレスに格納）
+    let i2: i64 = 1;
+    let i3: i64 = 2;
+    println!("Stack address of i2 is: {:p}", &i2);
+    println!("Stack address of i3 is: {:p}", &i3);
 }
