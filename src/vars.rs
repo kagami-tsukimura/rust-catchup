@@ -3,6 +3,7 @@
 // pub mod sub_b;
 
 // 定数
+// Rustでは代入をバインドと呼ぶ
 const MAX_POINTS: u32 = 100_000;
 
 // デフォルトはprivate
@@ -48,4 +49,9 @@ pub fn run() {
     println!("The value 't1' = ({}, {}, {})", t1.0, t1.1, t1.2);
     println!("The value 't1' = ({}, {}, {})", x, y, z);
     println!("The value 't1' = {}", t1.0);
+
+    // ポインタごとバインド
+    let mut t2 = ((0, 1), (2, 3));
+    let ((ref mut x1_ptr, ref mut y1_ptr), _) = t2;
+    println!("Stack address of x1, y1 is: {:p}, {:p}", &x1_ptr, &y1_ptr);
 }
