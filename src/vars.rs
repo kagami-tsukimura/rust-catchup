@@ -18,4 +18,8 @@ pub fn run() {
     // 使用しない変数は”_”で明示的に指定→コンパイル時のwarningを避ける
     let _i1 = 3;
     let _f1 = 0.1;
+    // 実行環境のサイズ（64bit）
+    println!("{}", usize::BITS);
+    // {:p}:ポインタ形式でメモリアドレスを表示
+    println!("Memory address of const is: {:p}", &MAX_POINTS);
 }
