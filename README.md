@@ -68,7 +68,9 @@
 
 </details>
 
-## 環境構築
+## 環境構築 ~ 実行
+
+<details><summary>[Rust Env & Run]</summary>
 
 ### Rust のインストール
 
@@ -87,8 +89,23 @@ cargo new <環境名>
 - Rust(Extension Pack)
 - CodeLLDB
 
+### Auto Formatter
+
+1. `Ctrl + Shift + P `
+2. `settings` > Enter
+3. Copy & Paste
+
+```json
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+```
+
 ### 実行
 
 ```bash
 cargo run
 ```
+
+</details>
