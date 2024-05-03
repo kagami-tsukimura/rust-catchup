@@ -2,6 +2,8 @@
 
 ## Overview
 
+<details><summary>[Rust Overview]</summary>
+
 ### Rust とは
 
 - 2015 年にリリースされた静的型付け言語
@@ -63,3 +65,30 @@
   - 同タイプの C/C++息が長い言語のため
   - 習得が困難で差別化
   - コンピュータシステムの仕組みに触れられる（e.g. メモリ管理）
+
+</details>
+
+## 環境構築
+
+### Rust のインストール
+
+```bash
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+### Rust 環境作成
+
+```bash
+cargo new <環境名>
+```
+
+### 拡張機能
+
+- Rust(Extension Pack)
+- CodeLLDB
+
+### 実行
+
+```bash
+cargo run
+```
