@@ -62,4 +62,11 @@ pub fn run() {
     println!("Stack address of x1, y1 is: {:p}, {:p}", &x1_ptr, &y1_ptr);
     println!("The value 'x1_ptr' = {}, 'y1_ptr' = {}", *x1_ptr, *y1_ptr);
     println!("{:?}", t2);
+
+    // 配列(サイズ(要素数)はコンパイル時に決定)
+    let a1: [i32; 5] = [1, 2, 3, 4, 5];
+    // [3, 3, 3, 3, 3]
+    let a2: [i32; 5] = [3; 5];
+    println!("The value 'a1' = {:?}", a1);
+    println!("The value 'a2' = {:?}", a2);
 }
