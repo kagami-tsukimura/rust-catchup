@@ -91,7 +91,7 @@ cargo new <環境名>
 
 ### Auto Formatter
 
-1. `Ctrl + Shift + P `
+1. `Ctrl + Shift + P`
 2. `settings` > Enter
 3. Copy & Paste
 
