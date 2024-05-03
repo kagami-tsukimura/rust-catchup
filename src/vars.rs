@@ -1,5 +1,6 @@
-mod sub_a;
-mod sub_b;
+// mainでsub_aとsub_bを呼び出せるように`pub`を付ける
+pub mod sub_a;
+pub mod sub_b;
 
 // デフォルトはprivate
 pub fn run() {
