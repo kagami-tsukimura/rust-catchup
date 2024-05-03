@@ -41,4 +41,9 @@ pub fn run() {
         println!("The value local scope 'y' = {}", y);
     }
     println!("The value 'y' = {}", y);
+
+    let t1: (i32, f64, &str) = (500, 6.4, "dummy");
+    let (x, y, z) = t1;
+    println!("The value 't1' = ({}, {}, {})", t1.0, t1.1, t1.2);
+    println!("The value 't1' = {}", t1.0);
 }
