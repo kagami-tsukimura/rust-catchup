@@ -51,7 +51,14 @@ pub fn run() {
     println!("The value 't1' = {}", t1.0);
 
     // ポインタごとバインド
-    let mut t2 = ((0, 1), (2, 3));
+    let mut t2: ((i32, i32), (i32, i32)) = ((0, 1), (2, 3));
+    // x1_ptr = 0, y1_ptr = 1, (2, 3) = _
     let ((ref mut x1_ptr, ref mut y1_ptr), _) = t2;
     println!("Stack address of x1, y1 is: {:p}, {:p}", &x1_ptr, &y1_ptr);
+    println!("The value 'x1_ptr' = {}, 'y1_ptr' = {}", *x1_ptr, *y1_ptr);
+    // 同じポインタを書き換え
+    *x1_ptr = 5;
+    *y1_ptr = -5;
+    println!("Stack address of x1, y1 is: {:p}, {:p}", &x1_ptr, &y1_ptr);
+    println!("The value 'x1_ptr' = {}, 'y1_ptr' = {}", *x1_ptr, *y1_ptr);
 }
