@@ -28,4 +28,12 @@ pub fn run() {
     let i3: i64 = 2;
     println!("Stack address of i2 is: {:p}", &i2);
     println!("Stack address of i3 is: {:p}", &i3);
+
+    let y: i32 = 5;
+    println!("Stack address of y is: {:p}", &y);
+    let y: i32 = y + 1;
+    println!("Stack address of y + 1 is: {:p}", &y);
+    let y: i32 = y * 2;
+    println!("Stack address of y * 2 is: {:p}", &y);
+    println!("The value 'y' = {}", y);
 }
