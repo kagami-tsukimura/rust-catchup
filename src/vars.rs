@@ -10,14 +10,14 @@ pub fn run() {
     // sub_a::func_a();
     println!("Here is vars module!");
     // sub_b::func_b();
-    let mut x = 5;
+    let mut x: i32 = 5;
     println!("The value 'x' = {}", x);
     x = 6;
     println!("The value 'x' = {}", x);
 
     // 使用しない変数は”_”で明示的に指定→コンパイル時のwarningを避ける
-    let _i1 = 3;
-    let _f1 = 0.1;
+    let _i1: i32 = 3;
+    let _f1: f64 = 0.1;
     // 実行環境のサイズ（64bit）
     println!("{}", usize::BITS);
     // {:p}:ポインタ形式でメモリアドレスを表示
@@ -35,5 +35,10 @@ pub fn run() {
     println!("Stack address of y + 1 is: {:p}", &y);
     let y: i32 = y * 2;
     println!("Stack address of y * 2 is: {:p}", &y);
+    println!("The value 'y' = {}", y);
+    {
+        let y: i32 = 0;
+        println!("The value local scope 'y' = {}", y);
+    }
     println!("The value 'y' = {}", y);
 }
