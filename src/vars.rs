@@ -72,4 +72,50 @@ pub fn run() {
     println!("The value 'a2' = {:?}", a2);
     // 各要素にアクセス
     println!("The value 'a1[0]' = {}, 'a2[2]' = {}", a1[0], a2[2]);
+
+    // 文字列リテラル
+    // 26bytes（アルファベット1byte, ひらがな漢字3byte）
+    let s1: &str = "helloこんにちは挨拶";
+    // 5bytes（アルファベット1byte, ひらがな漢字3byte）
+    let s2: &str = "hello";
+    println!("Stack address of\ns1 is: {:p}\ns2 is: {:p}", &s1, &s2);
+    println!("The value 's1' = {}", s1);
+
+    // ポインタアドレス（領域の先頭アドレス）を取得: as_ptr()
+    println!(
+        "Stack memory address of \ns1 is: {:?}\ns2 is: {:?}",
+        &s1.as_ptr(),
+        &s2.as_ptr()
+    );
+
+    // length取得
+    println!("Len of \ns1 is: {}\ns2 is: {}", &s1.len(), &s2.len());
+
+    // mutableで指定（後ほど文字追加するため）
+    let mut s1: String = String::from("hello");
+    let mut s2: String = String::from("helloworld");
+    println!("Stack address of\ns1 is: {:p}\ns2 is: {:p}", &s1, &s2);
+    // ヒープアドレス取得
+    println!(
+        "Heap memory address of \ns1 is: {:?}\ns2 is: {:?}",
+        &s1.as_ptr(),
+        &s2.as_ptr()
+    );
+    println!("Len of \ns1 is: {}\ns2 is: {}", &s1.len(), &s2.len());
+    // キャパシティ取得（明示的に指定していないため、len = capacity）
+    println!(
+        "Capacity of \ns1 is: {}\ns2 is: {}",
+        &s1.capacity(),
+        &s2.capacity()
+    );
+    // 変数に値を追加（s1: hello_new1, s2: helloworld_new2）
+    s1.push_str("_new1");
+    s2.push_str("_new2");
+    println!("Variable of\ns1 is: {}\ns2 is: {}", s1, s2);
+    println!("Len of \ns1 is: {}\ns2 is: {}", &s1.len(), &s2.len());
+    println!(
+        "Capacity of \ns1 is: {}\ns2 is: {}",
+        &s1.capacity(),
+        &s2.capacity()
+    );
 }
