@@ -36,5 +36,18 @@ pub fn run() {
         &v2.capacity()
     );
 
+    // insert
+    v1.insert(1, 10);
+    println!("{:?}", v1);
+
+    // Len
+    println!("Len of \nv1 is: {}\nv2 is: {}", &v1.len(), &v2.len());
+    // Cap
+    println!(
+        "Capacity of \nv1 is: {}\nv2 is: {}",
+        &v1.capacity(),
+        &v2.capacity()
+    );
+
     println!("vars.rs is done!\n------");
 }
