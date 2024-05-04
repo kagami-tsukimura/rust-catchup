@@ -95,4 +95,10 @@ pub fn run() {
     let mut s1: String = String::from("hello");
     let mut s2: String = String::from("helloworld");
     println!("Stack address of\ns1 is: {:p}\ns2 is: {:p}", &s1, &s2);
+    // ヒープアドレス取得
+    println!(
+        "Heap memory address of \ns1 is: {:?}\ns2 is: {:?}",
+        &s1.as_ptr(),
+        &s2.as_ptr()
+    );
 }
