@@ -64,6 +64,7 @@ pub fn run() {
 
     // append
     v1.append(&mut v3);
+    // 連結したv3は空配列になる
     println!("{:?}", v1);
     println!("{:?}", v3);
 
