@@ -10,6 +10,19 @@ pub fn run() {
     let s2 = s1;
     println!("The value of s2 is: {}", s2);
 
+    // 文字列スライスは所有ではなく参照
+    // 文字列リテラルから文字列スライス作成
+    let s3 = "hello";
+    // 静的領域にあるため解放不要
+    println!("The value of s3 is: {}", s3);
+
+    // String型から文字列スライス作成
+    let s4 = String::from("hello");
+    // &s4: 参照取得
+    let s5 = &s4;
+    // 所有権はs4(String型)から移動しない
+    println!("The value of s5 is: {}", s5);
+
     println!("");
     println!("ownership.rs is done!\n------");
 }
