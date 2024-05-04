@@ -97,7 +97,7 @@ pub fn run() {
     println!("Stack address of\ns1 is: {:p}\ns2 is: {:p}", &s1, &s2);
     // ヒープアドレス取得
     println!(
-        "Heap memory address of \ns1 is: {:?}\ns2 is: {:?}",
+        "Heap address of \ns1 is: {:?}\ns2 is: {:?}",
         &s1.as_ptr(),
         &s2.as_ptr()
     );
