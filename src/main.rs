@@ -1,3 +1,4 @@
+mod ownership;
 mod vars;
 
 fn main() {
@@ -7,4 +8,5 @@ fn main() {
     vars::run();
     // println!("------");
     // vars::sub_a::func_a();
+    ownership::run();
 }

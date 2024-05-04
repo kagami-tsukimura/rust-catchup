@@ -8,6 +8,7 @@ const MAX_POINTS: u32 = 100_000;
 
 // デフォルトはprivate
 pub fn run() {
+    println!("vars.rs is start!");
     // sub_a::func_a();
     println!("Here is vars module!");
     // sub_b::func_b();
@@ -118,4 +119,6 @@ pub fn run() {
         &s1.capacity(),
         &s2.capacity()
     );
+
+    println!("vars.rs is done!\n------");
 }
