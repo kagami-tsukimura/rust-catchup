@@ -90,4 +90,9 @@ pub fn run() {
 
     // length取得
     println!("Len of \ns1 is: {}\ns2 is: {}", &s1.len(), &s2.len());
+
+    // mutableで指定（後ほど文字追加するため）
+    let mut s1: String = String::from("hello");
+    let mut s2: String = String::from("helloworld");
+    println!("Stack address of\ns1 is: {:p}\ns2 is: {:p}", &s1, &s2);
 }
