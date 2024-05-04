@@ -36,7 +36,7 @@ pub fn run() {
         &v2.capacity()
     );
 
-    // insert
+    // insert(indexの後ろにelementを追加: [1, 2, 3, 4] => [1, 10, 2, 3, 4])
     v1.insert(1, 10);
     println!("{:?}", v1);
 
