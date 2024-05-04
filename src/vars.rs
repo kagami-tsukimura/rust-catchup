@@ -81,7 +81,7 @@ pub fn run() {
     println!("Stack address of s1 is: {:p}, s2 is: {:p}", &s1, &s2);
     println!("The value 's1' = {}", s1);
 
-    // ポインタアドレスを取得: as_ptr()
+    // ポインタアドレス（領域の先頭アドレス）を取得: as_ptr()
     println!(
         "Stack memory address of \ns1 is: {:p}\ns2 is: {:p}",
         &s1.as_ptr(),
