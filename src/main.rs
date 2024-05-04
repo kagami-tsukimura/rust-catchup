@@ -1,10 +1,10 @@
 mod vars;
 
 fn main() {
-    println!("Hello, world!");
-    println!("Rust is awesome!");
+    // println!("Hello, world!");
+    // println!("Rust is awesome!");
     // vars.rsのrun()を実行
     vars::run();
-    println!("------");
-    vars::sub_a::func_a();
+    // println!("------");
+    // vars::sub_a::func_a();
 }
