@@ -1,14 +1,16 @@
-mod ownership;
+// mod ownership;
 mod stackover;
-mod vars;
+// mod vars;
 
 fn main() {
     // println!("Hello, world!");
     // println!("Rust is awesome!");
-    // vars.rsのrun()を実行
-    vars::run();
-    // println!("------");
+
+    // // vars.rsのrun()を実行
+    // vars::run();
     // vars::sub_a::func_a();
-    ownership::run();
+
+    // ownership::run();
+
     stackover::run();
 }
