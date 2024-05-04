@@ -62,5 +62,10 @@ pub fn run() {
         &v2.capacity()
     );
 
+    // append
+    v1.append(&mut v3);
+    println!("{:?}", v1);
+    println!("{:?}", v3);
+
     println!("vars.rs is done!\n------");
 }
