@@ -21,5 +21,20 @@ pub fn run() {
         &v1, &v2, &v3
     );
 
+    // アドレス
+    println!(
+        "Heap memory address of\nv1 is: {:?}\nv2 is: {:?}",
+        &v1.as_ptr(),
+        &v2.as_ptr()
+    );
+    // Len
+    println!("Len of \nv1 is: {}\nv2 is: {}", &v1.len(), &v2.len());
+    // Cap
+    println!(
+        "Capacity of \nv1 is: {}\nv2 is: {}",
+        &v1.capacity(),
+        &v2.capacity()
+    );
+
     println!("vars.rs is done!\n------");
 }
