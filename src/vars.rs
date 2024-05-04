@@ -72,4 +72,9 @@ pub fn run() {
     println!("The value 'a2' = {:?}", a2);
     // 各要素にアクセス
     println!("The value 'a1[0]' = {}, 'a2[2]' = {}", a1[0], a2[2]);
+
+    // 文字列リテラル
+    // 26bytes（アルファベット1byte, ひらがな漢字3byte）
+    let s1: &str = "helloこんにちは挨拶";
+    println!("The value 's1' = {}", s1);
 }
