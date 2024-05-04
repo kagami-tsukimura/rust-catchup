@@ -78,13 +78,16 @@ pub fn run() {
     let s1: &str = "helloこんにちは挨拶";
     // 5bytes（アルファベット1byte, ひらがな漢字3byte）
     let s2: &str = "hello";
-    println!("Stack address of s1 is: {:p}, s2 is: {:p}", &s1, &s2);
+    println!("Stack address of\ns1 is: {:p}\ns2 is: {:p}", &s1, &s2);
     println!("The value 's1' = {}", s1);
 
     // ポインタアドレス（領域の先頭アドレス）を取得: as_ptr()
     println!(
-        "Stack memory address of \ns1 is: {:p}\ns2 is: {:p}",
+        "Stack memory address of \ns1 is: {:?}\ns2 is: {:?}",
         &s1.as_ptr(),
         &s2.as_ptr()
     );
+
+    // length取得
+    println!("Len of \ns1 is: {}\ns2 is: {}", &s1.len(), &s2.len());
 }
