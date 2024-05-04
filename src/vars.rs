@@ -108,4 +108,14 @@ pub fn run() {
         &s1.capacity(),
         &s2.capacity()
     );
+    // 変数に値を追加（s1: hello_new1, s2: helloworld_new2）
+    s1.push_str("_new1");
+    s2.push_str("_new2");
+    println!("Variable of\ns1 is: {}\ns2 is: {}", s1, s2);
+    println!("Len of \ns1 is: {}\ns2 is: {}", &s1.len(), &s2.len());
+    println!(
+        "Capacity of \ns1 is: {}\ns2 is: {}",
+        &s1.capacity(),
+        &s2.capacity()
+    );
 }
