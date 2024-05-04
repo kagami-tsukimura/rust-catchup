@@ -1,4 +1,5 @@
 mod ownership;
+mod stackover;
 mod vars;
 
 fn main() {
@@ -9,4 +10,5 @@ fn main() {
     // println!("------");
     // vars::sub_a::func_a();
     ownership::run();
+    stackover::run();
 }

@@ -1,5 +1,6 @@
 pub fn run() {
     println!("ownership.rs is start!");
+
     let s1 = String::from("hello");
     println!("The value of s1 is: {}", s1);
 
@@ -23,6 +24,5 @@ pub fn run() {
     // 所有権はs4(String型)から移動しない
     println!("The value of s5 is: {}", s5);
 
-    println!("");
     println!("ownership.rs is done!\n------");
 }
