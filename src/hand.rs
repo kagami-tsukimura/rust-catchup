@@ -13,6 +13,14 @@ pub fn run() {
         None => println!("Error: Division by zero."),
     }
 
+    let res2 = division_result(5.0, 0.0);
+    match res2 {
+        // 正常系: if y != 0.0
+        Ok(x) => println!("Result: {:.3}", x),
+        // 異常系: if y == 0.0
+        Err(e) => println!("{}", e),
+    }
+
     println!("hand.rs is done!\n------");
 }
 
