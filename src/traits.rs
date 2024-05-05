@@ -34,6 +34,8 @@ pub fn run() {
     get_eat(&apple);
     get_price(&banana);
     get_eat(&banana);
+    get_price(&apple);
+    get_price(&banana);
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
