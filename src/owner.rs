@@ -6,7 +6,13 @@ pub fn run() {
     // 所有権：s1 → s2
     let s2 = s1;
     // s1に所有権がない（s2にmove）ためアクセスできずにエラー
+    // String型は`Copy` trait を実装していないため
     // println!("{}, {}", s1, s2);
+
+    // 整数、浮動小数点、配列型は`Copy` trait を実装しているためエラーにならない
+    let x1 = 5;
+    let x2 = x1;
+    println!("{} {}", x1, x2);
 
     println!("owner.rs is done!\n------");
 }
