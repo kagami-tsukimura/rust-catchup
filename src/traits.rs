@@ -36,6 +36,9 @@ struct NewsArticle {
     content: String,
 }
 impl Summary for NewsArticle {
+    // fnなし: defaultメソッドを呼び出し
+
+    // defaultメソッドを上書き
     // fn summarize(&self) -> String {
     //     // format: {}をString型に変換
     //     format!("{} by {} ({})", self.headline, self.author, self.location)
