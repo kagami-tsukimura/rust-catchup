@@ -70,7 +70,16 @@ pub fn run() {
         reply: false,
         retweet: false,
     };
+
     println!("summarize: {}", tweet.summarize());
+
+    let article = NewsArticle {
+        headline: String::from("Penguins win the Stanley Cup Championship!"),
+        location: String::from("Pittsburgh, PA, USA"),
+        author: String::from("Rustacean"),
+        content: String::from("The Pittsburgh Penguins once again are the best team in the NHL."),
+    };
+    println!("article: {}", article.summarize());
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
