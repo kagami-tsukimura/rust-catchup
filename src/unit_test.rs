@@ -38,4 +38,18 @@ mod tests {
         // a > bならテストが通る
         assert!(a.compare_area(&b));
     }
+
+    #[test]
+    fn test_a_is_smaller() {
+        let a = Rectangle {
+            width: 3,
+            height: 5,
+        };
+        let b = Rectangle {
+            width: 10,
+            height: 3,
+        };
+        // b > aならテストが通る
+        assert!(!(a.compare_area(&b)));
+    }
 }
