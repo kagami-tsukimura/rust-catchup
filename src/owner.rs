@@ -38,6 +38,7 @@ pub fn run() {
     // 関数の呼び出し
     let s5 = String::from("hello");
     print_ownership(&s5);
+    // メモリ番地が変わる
     take_ownership(s5);
     // take_ownership()の中で所有権がmove→s5に所有権がなくなりエラー
     // println!("{}", s5);
@@ -53,11 +54,11 @@ fn take_ownership(s: String) {
 }
 
 fn print_ownership(s: &String) {
-    println!("print_ownership------");
+    println!("\nprint_ownership: {}------", s);
     println!("{}", s);
     println!("Stack address of s is: {:p}", &s);
     println!("Heap address of s is: {:?}", &s.as_ptr());
     println!("Length of s is: {}", s.len());
     println!("Capacity of s is: {}", s.capacity());
-    println!("------print_ownership");
+    println!("------print_ownership: {}\n", s);
 }
