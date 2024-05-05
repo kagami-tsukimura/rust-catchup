@@ -35,6 +35,7 @@ mod tests {
             width: 3,
             height: 3,
         };
+        // a > bならテストが通る
         assert!(a.compare_area(&b));
     }
 }
