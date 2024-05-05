@@ -44,6 +44,10 @@ pub fn run() {
     // Heapが引き継がれたため
     // println!("{}", s5);
 
+    let s6 = String::from("hello");
+    // 関数の返却時にs6→s7に所有権がmove
+    let s7 = take_giveback_ownership(s6);
+
     println!("owner.rs is done!\n------");
 }
 
