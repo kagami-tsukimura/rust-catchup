@@ -3,15 +3,12 @@ pub fn run() {
     let mut largest = numbers[0];
     println!("largest: {}", largest);
 
-    for number in numbers {
-        if number > largest {
-            largest = number;
-        }
-    }
+    largest = get_largest(numbers);
     println!("largest: {}", largest);
 }
 
 fn get_largest(numbers: Vec<i32>) -> i32 {
+    // Vector内の最大値を取得
     let mut largest = 0;
     for number in numbers {
         if number > largest {
