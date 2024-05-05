@@ -5,12 +5,12 @@ pub fn run() {
     println!("largest: {}", largest);
 }
 
-fn get_largest_i32(numbers: Vec<i32>) -> i32 {
+fn get_largest_i32(items: Vec<i32>) -> i32 {
     // Vector<i32>内の最大値を取得
     let mut largest = 0;
-    for number in numbers {
-        if number > largest {
-            largest = number;
+    for item in items {
+        if item > largest {
+            largest = item;
         }
     }
     largest
