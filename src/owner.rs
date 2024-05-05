@@ -87,6 +87,15 @@ pub fn run() {
     println!("{}", r3);
     println!("{}", s11); // ok
 
+    let mut s12 = String::from("hello");
+    let r4 = &s12;
+    let r5 = &s12;
+    println!("{} {}", r4, r5);
+    let r6 = &mut s12;
+    *r6 = String::from("hello_updated!");
+    println!("{}", r6);
+    println!("{}", s12);
+
     println!("owner.rs is done!\n------");
 }
 
