@@ -11,15 +11,16 @@ pub fn run() {
     println!("{}", s2);
 
     // 整数、浮動小数点、配列型は`Copy` trait を実装している
-    // moveが起きずにスタック内で値がコピー→エラーにならない
     let x1 = 5;
     let x2 = x1;
     println!("{} {}", x1, x2);
+    // moveが起きずにスタック内で値がコピー→エラーにならない
     println!("Stack address of x1, x2 is: {:p}, {:p}", &x1, &x2);
 
     // 文字列スライス
     let sl1 = "literal";
     let sl2 = sl1;
+    // moveが起きずにスタック内で値がコピー→エラーにならない
     println!("{} {}", sl1, sl2);
     println!("Stack address of sl1, sl2 is: {:p}, {:p}", &sl1, &sl2);
 
