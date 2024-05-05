@@ -23,6 +23,7 @@ pub fn run() {
     println!("longest = {}", get_longest(&st1, &st2));
 
     let st3 = String::from("z");
+    // 型：逆算して推論（get_longest()の返り値から推論）
     // let res2;
     // ライフタイムが異なるケース
     {
