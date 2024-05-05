@@ -70,6 +70,7 @@ pub fn run() {
     let height = 20;
     let rect = Rectangle::create(width, height);
     println!("Rectangle: {:#?}", rect);
+    println!("Rectangle_Area: {:#?}", rect.area());
 }
 
 fn build_user(email: String, username: String) -> User {
