@@ -26,6 +26,19 @@ trait Summary {
     fn summarize(&self) -> String;
 }
 
+struct NewsArticle {
+    headline: String,
+    location: String,
+    author: String,
+    content: String,
+}
+impl Summary for NewsArticle {
+    fn summarize(&self) -> String {
+        // format: {}をString型に変換
+        format!("{} by {} ({})", self.headline, self.author, self.location)
+    }
+}
+
 pub fn run() {
     println!("trait.rs is start!");
 
