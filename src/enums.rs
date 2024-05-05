@@ -1,4 +1,3 @@
-#[derive(Debug)]
 enum OS {
     Windows(u32, String),
     Mac(u32, String),
