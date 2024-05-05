@@ -87,6 +87,7 @@ pub fn run() {
     };
     println!("summarize: {}", tweet.summarize());
 
+    // NewsArticle: Summary, Messageの2つのトレイトを保有
     let article = NewsArticle {
         headline: String::from("Penguins win the Stanley Cup Championship!"),
         location: String::from("Pittsburgh, PA, USA"),
@@ -98,6 +99,7 @@ pub fn run() {
     notify(&tweet);
     notify(&article);
 
+    // article(NewsArticle): Summary, Messageの2つのトレイトを保有
     notify_another(&article);
     // // Messageトレイトを実装していないためエラー
     // notify_another(&tweet);
