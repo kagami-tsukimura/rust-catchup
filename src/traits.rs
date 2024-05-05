@@ -23,7 +23,10 @@ impl Fruits for Banana {
 }
 
 trait Summary {
-    fn summarize(&self) -> String;
+    // defaultメソッド
+    fn summarize(&self) -> String {
+        String::from("Read more...")
+    }
 }
 
 struct NewsArticle {
@@ -33,10 +36,10 @@ struct NewsArticle {
     content: String,
 }
 impl Summary for NewsArticle {
-    fn summarize(&self) -> String {
-        // format: {}をString型に変換
-        format!("{} by {} ({})", self.headline, self.author, self.location)
-    }
+    // fn summarize(&self) -> String {
+    //     // format: {}をString型に変換
+    //     format!("{} by {} ({})", self.headline, self.author, self.location)
+    // }
 }
 struct Tweet {
     username: String,
