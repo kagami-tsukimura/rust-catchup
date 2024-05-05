@@ -18,8 +18,8 @@ pub fn run() {
 
 fn print_os_info(os: OS) {
     match os {
-        OS::Windows(a, b) => println!("{} {}", a, b),
-        OS::Mac(a, b) => println!("{} {}", a, b),
-        OS::Linux(a, b) => println!("{} {}", a, b),
+        OS::Windows(year, who) => println!("{} {}", year, who),
+        OS::Mac(year, who) => println!("{} {}", year, who),
+        OS::Linux(year, who) => println!("{} {}", year, who),
     }
 }
