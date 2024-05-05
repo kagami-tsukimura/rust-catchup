@@ -70,10 +70,10 @@ pub fn run() {
     let r2 = &s10;
     println!("{} {} {}", s10, r1, r2);
 
-    // immutableとmutableなref: 共存不可
-    let mut s10 = String::from("hello");
-    let r1 = &s10;
-    //  共存不可
+    // // immutableとmutableなref: 共存不可
+    // let mut s10 = String::from("hello");
+    // let r1 = &s10;
+    // //  共存不可
     // let r2 = &mut s10;
     // println!("{} {} {}", s10, r1, r2);
 
