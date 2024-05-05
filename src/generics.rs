@@ -42,8 +42,11 @@ pub fn run() {
 
     // 異なる型を指定する場合
     let p3 = PointAnother { x: 4, y: 2.1 };
-
     println!("{} {}", p3.x, p3.y);
+
+    // x: 文字列スライス, y: char
+    let p4 = PointAnother { x: "hello", y: 'c' };
+    println!("{} {}", p4.x, p4.y);
 }
 
 // T: 何らかの型
