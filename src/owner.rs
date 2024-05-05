@@ -44,6 +44,8 @@ pub fn run() {
     // Heapが引き継がれたため
     // println!("{}", s5);
 
+    // s6, s, s7自体はスタック内の別メモリに生成
+    // 実データは所有権としてmove
     let s6 = String::from("hello");
     print_ownership(&s6);
     // 関数の返却時にs6→s7に所有権がmove
