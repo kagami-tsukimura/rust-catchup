@@ -72,6 +72,8 @@ pub fn run() {
     let rect = Rectangle::create(width, height);
     println!("Rectangle: {:#?}", rect);
     rect.print_area();
+    // print_area(&self)なら参照渡しのため、呼び出し後もprint可能
+    println!("Rectangle: {:#?}", rect);
 }
 
 fn build_user(email: String, username: String) -> User {
