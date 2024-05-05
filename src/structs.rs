@@ -10,9 +10,16 @@ struct User {
     active: bool,
 }
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
+}
+// 構造体にメソッド追加
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
 }
 
 pub fn run() {
