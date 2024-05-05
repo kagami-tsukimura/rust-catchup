@@ -17,6 +17,9 @@ struct Rectangle {
 }
 // 構造体にメソッド追加
 impl Rectangle {
+    fn create(width: u32, height: u32) -> Self {
+        Self { width, height }
+    }
     fn area(&self) -> u32 {
         self.width * self.height
     }
