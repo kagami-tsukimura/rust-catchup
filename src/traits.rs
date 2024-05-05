@@ -31,12 +31,13 @@ pub fn run() {
 
     // 参照渡し: get_price()後に所有権を持ってget_eat()で呼び出しできるように、"&"をつける
     get_price(&apple);
-    get_price(&banana);
     get_eat(&apple);
+    get_price(&banana);
     get_eat(&banana);
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
+    // &T: 関数終了時に所有権を解放しないように参照渡し
     println!("price is: ${}", fruits.price())
 }
 
