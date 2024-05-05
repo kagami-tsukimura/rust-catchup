@@ -29,7 +29,7 @@ pub fn run() {
     let p1 = Point { x: 1, y: 2 };
     // 構造体に合っていない型はエラー
     // 構造体をジェネリクスにして回避
-    let p2 = Point { x: 3.0, y: 2 };
+    let p2 = Point { x: 3.0, y: 2.0 };
     println!("{} {}", p1.x, p2.y);
 }
 
