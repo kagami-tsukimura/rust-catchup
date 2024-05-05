@@ -65,11 +65,17 @@ pub fn run() {
 
     // immutableなref: 複数作成可
     // mutableなref: 複数作成不可
-
     let s10 = String::from("hello");
     let r1 = &s10;
     let r2 = &s10;
     println!("{} {} {}", s10, r1, r2);
+
+    // immutableとmutableなref: 共存不可
+    let mut s10 = String::from("hello");
+    let r1 = &s10;
+    //  共存不可
+    // let r2 = &mut s10;
+    // println!("{} {} {}", s10, r1, r2);
 
     println!("owner.rs is done!\n------");
 }
