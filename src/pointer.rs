@@ -10,7 +10,7 @@ pub fn run() {
     // スタック：Boxポインタ、データ、ptr(8bytes), len(8bytes), capacity(8bytes)
     // ヒープ：データ
     // Boxポインタ後：メモリ表現の確認
-    // スタック：Boxポインタ（heapデータのポインタ）
+    // スタック：Boxポインタ（heapデータの先頭アドレスポインタ）
     // ヒープ：データ、スタックデータ、ptr(8bytes), len(8bytes), capacity(8bytes)
 
     println!("pointer.rs is start!");
