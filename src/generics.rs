@@ -1,10 +1,17 @@
 // 構造体: Typeのようなもの
 // 型をジェネリクスにすることも可能
-// 複数同じジェネリクスを指定する場合、変数の型も合わせる必要がある
+// 複数ジェネリクスを指定する場合、変数の型も合わせる必要がある
 // →x: f64, y: f64など（x: f64, y: i32はエラー）
 struct Point<T> {
     x: T,
     y: T,
+}
+
+// 異なるジェネリクスを指定する場合、複数のジェネリクス型を用意
+// →<T, U>
+struct PointAnother<T, U> {
+    x: T,
+    y: U,
 }
 
 pub fn run() {
@@ -29,8 +36,13 @@ pub fn run() {
     let p1 = Point { x: 1, y: 2 };
     // 構造体に合っていない型はエラー
     // 構造体をジェネリクスにして回避
-    let p2 = Point { x: 3.0, y: 2.0 };
-    println!("{} {}", p1.x, p2.y);
+    let p2 = Point { x: 3.5, y: 2.4 };
+    println!("{} {}", p1.x, p2.x);
+    println!("{} {}", p1.y, p2.y);
+
+    let p3 = PointAnother { x: 4, y: 2.1 };
+
+    println!("{} {}", p3.x, p3.y);
 }
 
 // T: 何らかの型
