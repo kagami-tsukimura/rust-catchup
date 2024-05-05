@@ -18,8 +18,8 @@ pub fn run() {
 
 fn print_os_info(os: OS) {
     match os {
-        OS::Windows(year, who) => println!("{} {}", year, who),
-        OS::Mac(year, who) => println!("{} {}", year, who),
-        OS::Linux(year, who) => println!("{} {}", year, who),
+        OS::Windows(year, who) => println!("Windows: release in {} by {}", year, who),
+        OS::Mac(year, who) => println!("Mac: release in {} by {}", year, who),
+        OS::Linux(year, who) => println!("Linux: release in {} by {}", year, who),
     }
 }
