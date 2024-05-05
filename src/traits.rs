@@ -1,15 +1,15 @@
 // trait: 複数の型に共通の機能を提供
 trait Fruits {
     fn price(&self) -> u32;
-    fn eat(&self);
+    fn eat(&self) -> &str;
 }
 struct Apple;
 impl Fruits for Apple {
     fn price(&self) -> u32 {
         100
     }
-    fn eat(&self) {
-        println!("eat apple");
+    fn eat(&self) -> &str {
+        "apple"
     }
 }
 
@@ -18,8 +18,8 @@ impl Fruits for Banana {
     fn price(&self) -> u32 {
         40
     }
-    fn eat(&self) {
-        println!("eat banana");
+    fn eat(&self) -> &str {
+        "banana"
     }
 }
 
@@ -28,4 +28,17 @@ pub fn run() {
 
     let apple = Apple {};
     let banana = Banana {};
+
+    get_price(&apple);
+    get_price(&banana);
+    get_eat(&apple);
+    get_eat(&banana);
+}
+
+fn get_price<T: Fruits>(fruits: &T) {
+    println!("price is: ${}", fruits.price())
+}
+
+fn get_eat<T: Fruits>(fruits: &T) {
+    println!("eat is: {}", fruits.eat())
 }
