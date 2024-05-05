@@ -45,8 +45,11 @@ pub fn run() {
     // println!("{}", s5);
 
     let s6 = String::from("hello");
+    print_ownership(&s6);
     // 関数の返却時にs6→s7に所有権がmove
     let s7 = take_giveback_ownership(s6);
+    // print_ownership(&s6);
+    print_ownership(&s7);
 
     println!("owner.rs is done!\n------");
 }
