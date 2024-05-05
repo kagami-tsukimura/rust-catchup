@@ -99,6 +99,8 @@ pub fn run() {
     notify(&article);
 
     notify_another(&article);
+    // // Messageトレイトを実装していないためエラー
+    // notify_another(&tweet);
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
