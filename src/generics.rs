@@ -7,6 +7,15 @@ pub fn run() {
     // シングルクォート: char
     let chars = vec!['a', 'b', 'c', 'd', 'f', 'e'];
     println!("largest: {}", get_largest(chars));
+
+    // // トレード境界に属さない型はエラー
+    // let strings: Vec<String> = vec![
+    //     String::from("hello"),
+    //     String::from("rust"),
+    //     String::from("is"),
+    //     String::from("awesome"),
+    // ];
+    // println!("largest: {}", get_largest(strings))
 }
 
 // T: 何らかの型
