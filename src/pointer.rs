@@ -1,7 +1,8 @@
 // 列挙型 enum
 enum List {
     // (4bytes, List: コンパイラが無限に再帰でサイズ参照→エラー)
-    Node(i32, List),
+    // ListをBoxポインタ化すると、サイズがBoxポインタと等しくなる→値の確定
+    Node(i32, Box<List>),
     // 0byte
     Nil,
 }
