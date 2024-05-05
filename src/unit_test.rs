@@ -18,4 +18,5 @@ fn greeting(name: &str) -> String {
 }
 
 // testを実行するために必要
+// cargo testを実行したときのみコンパイル
 #[cfg(test)]
