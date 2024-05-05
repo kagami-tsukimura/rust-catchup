@@ -34,6 +34,9 @@ pub fn run() {
         sign_in_count: 1,
     };
     user1.email = String::from("someone_update1@example.com");
+    user1.username = String::from("someusername123_update1");
+    user1.active = false;
+    user1.sign_in_count += 1;
     println!("user1.email = {}", user1.email);
     println!("{:?}", user1);
 }
