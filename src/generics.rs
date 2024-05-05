@@ -40,6 +40,7 @@ pub fn run() {
     println!("{} {}", p1.x, p2.x);
     println!("{} {}", p1.y, p2.y);
 
+    // 異なる型を指定する場合
     let p3 = PointAnother { x: 4, y: 2.1 };
 
     println!("{} {}", p3.x, p3.y);
