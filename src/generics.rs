@@ -1,5 +1,7 @@
 pub fn run() {
-    println!("generics.rs is start!");
+    let numbers = vec![34, 50, 25, 100, 65];
+    let mut largest = numbers[0];
+    println!("largest: {}", largest);
 }
 
 fn print_generics(s: &String) {
