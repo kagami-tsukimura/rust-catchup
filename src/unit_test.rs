@@ -16,3 +16,6 @@ fn double_value(x: i32) -> i32 {
 fn greeting(name: &str) -> String {
     format!("Hello, {}!", name)
 }
+
+// testを実行するために必要
+#[cfg(test)]
