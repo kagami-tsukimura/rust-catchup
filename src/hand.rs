@@ -39,3 +39,12 @@ fn division_result(x: f64, y: f64) -> Result<f64, String> {
         Ok(x / y)
     }
 }
+
+fn sum(a: &[i32]) -> Option<i32> {
+    // "?"でエラーキャッチ→returnで、Option列挙型のNoneを返す
+    let a0 = a.get(0)?;
+    let a1 = a.get(1)?;
+    let a2 = a.get(2)?;
+    // エラーキャッチなし→returnで、Someを返す
+    Some(a0 + a1 + a2)
+}
