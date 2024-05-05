@@ -1,3 +1,5 @@
+// 構造体そのまま表示のためにDebugトレイトを実装(println!("user1 = {:?}", user1);)
+#[derive(Debug)]
 struct User {
     // String型
     username: String,
@@ -23,7 +25,7 @@ pub fn run() {
 
     // let mut user2 = user1;
     // // 所有権: user1→user2のためエラー
-    // println!("user1 = {}", user1);
+    println!("user1 = {:?}", user1);
 
     let mut user1 = User {
         email: String::from("someone@example.com"),
@@ -33,5 +35,5 @@ pub fn run() {
     };
     user1.email = String::from("someone_update1@example.com");
     println!("user1.email = {}", user1.email);
-    // println!("{:?}", user1);
+    println!("{:?}", user1);
 }
