@@ -16,12 +16,12 @@ fn get_largest(numbers: Vec<i32>) -> i32 {
     largest
 }
 
-fn print_generics(s: &String) {
-    println!("\nprint_generics: {}------", s);
-    println!("{}", s);
-    println!("Stack address of s is: {:p}", &s);
-    println!("Heap address of s is: {:?}", &s.as_ptr());
-    println!("Length of s is: {}", s.len());
-    println!("Capacity of s is: {}", s.capacity());
-    println!("------print_generics: {}\n", s);
-}
+// fn print_generics(s: &String) {
+//     println!("\nprint_generics: {}------", s);
+//     println!("{}", s);
+//     println!("Stack address of s is: {:p}", &s);
+//     println!("Heap address of s is: {:?}", &s.as_ptr());
+//     println!("Length of s is: {}", s.len());
+//     println!("Capacity of s is: {}", s.capacity());
+//     println!("------print_generics: {}\n", s);
+// }
