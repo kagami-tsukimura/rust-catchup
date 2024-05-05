@@ -11,6 +11,16 @@ pub fn run() {
     println!("largest: {}", largest);
 }
 
+fn get_largest(numbers: Vec<i32>) -> i32 {
+    let mut largest = 0;
+    for number in numbers {
+        if number > largest {
+            largest = number;
+        }
+    }
+    largest
+}
+
 fn print_generics(s: &String) {
     println!("\nprint_generics: {}------", s);
     println!("{}", s);
