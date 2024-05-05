@@ -1,9 +1,7 @@
 pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
-    let mut largest = numbers[0];
-    println!("largest: {}", largest);
 
-    largest = get_largest(numbers);
+    let largest = get_largest(numbers);
     println!("largest: {}", largest);
 }
 
