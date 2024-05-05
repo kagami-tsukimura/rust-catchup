@@ -52,4 +52,10 @@ mod tests {
         // b > aならテストが通る
         assert!(!(a.compare_area(&b)));
     }
+
+    #[test]
+    fn test_double() {
+        // (期待値, 処理の結果)
+        assert_eq!(20, double_value(10));
+    }
 }
