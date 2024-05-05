@@ -69,5 +69,6 @@ fn get_longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 
 fn dummy3() -> String {
     let s = String::from("dummy");
+    // s: 実体を返すためdropしない
     s
 }
