@@ -91,6 +91,7 @@ pub fn run() {
     let r4 = &s12;
     let r5 = &s12;
     println!("{} {}", r4, r5);
+    // ref
     let r6 = &mut s12;
     *r6 = String::from("hello_updated!");
     println!("{}", r6);
