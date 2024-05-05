@@ -67,5 +67,6 @@ fn print_ownership(s: &String) {
 fn take_giveback_ownership() -> String {
     let s = String::from("hello");
     // Rustではreturn文はない
+    // 最後にセミコロンのない値をreturnとみなして返す
     s
 }
