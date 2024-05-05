@@ -1,26 +1,19 @@
 pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
 
-    println!("largest: {}", get_largest_i32(numbers));
+    println!("largest: {}", get_largest(numbers));
 
     // ダブルクォート: 文字列リテラル
     // シングルクォート: char
     let chars = vec!['a', 'b', 'c', 'd', 'f', 'e'];
-    println!("largest: {}", get_largest_char(chars));
+    println!("largest: {}", get_largest(chars));
 }
 
-fn get_largest_i32(items: Vec<i32>) -> i32 {
-    // Vector<i32>内の最大値を取得
-    let mut largest = items[0];
-    for item in items {
-        if item > largest {
-            largest = item;
-        }
-    }
-    largest
-}
-
-fn get_largest_char(items: Vec<char>) -> char {
+// T: 何らかの型
+// T: PartialOrd + Copy: トレード境界
+// トレード境界を指定することで、任意の型に対応できる
+// →比較できない型もあるため、比較演算子を使う場合はなければエラー
+fn get_largest<T: PartialOrd + Copy>(items: Vec<T>) -> T {
     let mut largest = items[0];
     for item in items {
         if item > largest {
