@@ -17,4 +17,7 @@ pub fn run() {
     // ライフタイム→ダングリングポインタを防ぐ（コンパイラが指摘）
 
     // ジェネリックライフタイムアノテーション
+    let st1 = String::from("x");
+    let st2 = String::from("y");
+    println!("st1 = {}, st2 = {}", st1, st2);
 }
