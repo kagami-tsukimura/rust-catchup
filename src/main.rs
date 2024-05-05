@@ -5,7 +5,10 @@
 // mod owner;
 // mod life;
 // mod generics;
-mod ref_borrow;
+// mod ref_borrow;
+// mod structs;
+// mod enums;
+mod traits;
 
 fn main() {
     // println!("Hello, world!");
@@ -27,5 +30,11 @@ fn main() {
 
     // generics::run();
 
-    ref_borrow::run();
+    // ref_borrow::run();
+
+    // structs::run();
+
+    // enums::run();
+
+    traits::run();
 }
