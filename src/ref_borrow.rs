@@ -21,6 +21,14 @@ pub fn run() {
     let st2 = String::from("y");
     println!("st1 = {}, st2 = {}", st1, st2);
     println!("longest = {}", get_longest(&st1, &st2));
+
+    let st3 = String::from("z");
+    // ライフタイムが異なるケース
+    {
+        let st4 = String::from("scoped");
+        let res = get_longest(&st3, &st4);
+        println!("{}", res)
+    }
 }
 
 // x, yどちらのライフタイムを返り値に適用するかわからないためエラー
