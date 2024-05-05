@@ -1,4 +1,4 @@
-// 構造体そのまま表示のためにDebugトレイトを実装(println!("user1 = {:?}", user1);)
+// 構造体そのままコンソール出力のためにDebugトレイトを実装(println!("user1 = {:?}", user1);)
 #[derive(Debug)]
 struct User {
     // String型
