@@ -6,7 +6,8 @@
 // mod life;
 // mod generics;
 // mod ref_borrow;
-mod structs;
+// mod structs;
+mod enums;
 
 fn main() {
     // println!("Hello, world!");
@@ -30,5 +31,7 @@ fn main() {
 
     // ref_borrow::run();
 
-    structs::run();
+    // structs::run();
+
+    enums::run();
 }
