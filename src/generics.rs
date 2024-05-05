@@ -2,6 +2,13 @@ pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
     let mut largest = numbers[0];
     println!("largest: {}", largest);
+
+    for number in numbers {
+        if number > largest {
+            largest = number;
+        }
+    }
+    println!("largest: {}", largest);
 }
 
 fn print_generics(s: &String) {
