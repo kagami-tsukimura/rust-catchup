@@ -5,8 +5,7 @@ pub fn run() {
     let r = &x;
     println!("{}", r);
     println!("{}", x);
-
-    // x: 関数をdropする際に削除
+    // x: 関数を抜ける際にdrop
     // y: 使用後に削除
 
     // ダングリングポインタ
