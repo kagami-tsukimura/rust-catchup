@@ -47,6 +47,9 @@ pub fn run() {
         "build_user2: {:#?}",
         build_user(user2_email, user2_username)
     );
+
+    let user3 = build_user(String::from("user3@example.com"), String::from("user3"));
+    println!("build_user3: {:#?}", user3);
 }
 
 fn build_user(email: String, username: String) -> User {
