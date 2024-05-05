@@ -63,3 +63,9 @@ fn print_ownership(s: &String) {
     println!("Capacity of s is: {}", s.capacity());
     println!("------print_ownership: {}\n", s);
 }
+
+fn take_giveback_ownership() -> String {
+    let s = String::from("hello");
+    // Rustではreturn文はない
+    s
+}
