@@ -38,6 +38,8 @@ pub fn run() {
     // st4の実体: スコープを抜けてdrop
     // res2のポインタが指し示す先がないためエラー
     // println!("{}", res2);
+
+    println!("{}", dummy3());
 }
 
 // x, yどちらのライフタイムを返り値に適用するかわからないためエラー
@@ -64,3 +66,8 @@ fn get_longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 //     // →referenceを返すとダングリングポインタが発生するためエラー
 //     &x
 // }
+
+fn dummy3() -> String {
+    let s = String::from("dummy");
+    s
+}
