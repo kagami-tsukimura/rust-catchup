@@ -18,6 +18,7 @@ pub fn run() {
         sign_in_count: 1,
     };
     println!("user1.email = {}", user1.email);
+    // 構造体のような複雑なデータ型: {:?}とする
     // println!("{:?}", user1);
 
     // let mut user2 = user1;
