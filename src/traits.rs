@@ -29,6 +29,7 @@ pub fn run() {
     let apple = Apple {};
     let banana = Banana {};
 
+    // 参照渡し: get_price()後に所有権を持ってget_eat()で呼び出しできるように、"&"をつける
     get_price(&apple);
     get_price(&banana);
     get_eat(&apple);
