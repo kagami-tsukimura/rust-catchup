@@ -17,7 +17,7 @@ pub fn run() {
     // ライフタイム→ダングリングポインタを防ぐ（コンパイラが指摘）
 
     // ジェネリックライフタイムアノテーション
-    let st1 = String::from("x");
+    let st1 = String::from("xz");
     let st2 = String::from("y");
     println!("st1 = {}, st2 = {}", st1, st2);
     println!("longest = {}", get_longest(&st1, &st2));
@@ -25,7 +25,7 @@ pub fn run() {
 
 // x, yどちらのライフタイムを返り値に適用するかわからないためエラー
 // <'a>: ジェネリックライフタイムアノテーション
-// →
+// →引数(x, y)のうち、短い方のライフタイムを適用する
 fn get_longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
