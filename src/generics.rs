@@ -1,7 +1,7 @@
 // 構造体: Typeのようなもの
-struct Point {
-    x: i32,
-    y: i32,
+struct Point<T> {
+    x: T,
+    y: T,
 }
 
 pub fn run() {
@@ -25,7 +25,8 @@ pub fn run() {
 
     let p1 = Point { x: 1, y: 2 };
     // 構造体に合っていない型はエラー
-    // let p2 = Point { x: 3.0, y: 4.0 };
+    let p2 = Point { x: 3.0, y: 4.0 };
+    println!("{} {}", p1.x, p2.y);
 }
 
 // T: 何らかの型
