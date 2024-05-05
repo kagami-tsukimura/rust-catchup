@@ -1,11 +1,11 @@
 pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
 
-    let largest = get_largest(numbers);
+    let largest = get_largest_i32(numbers);
     println!("largest: {}", largest);
 }
 
-fn get_largest(numbers: Vec<i32>) -> i32 {
+fn get_largest_i32(numbers: Vec<i32>) -> i32 {
     // Vector内の最大値を取得
     let mut largest = 0;
     for number in numbers {
