@@ -9,7 +9,8 @@ pub fn run() {
     // String型は`Copy` trait を実装していないため
     // println!("{}, {}", s1, s2);
 
-    // 整数、浮動小数点、配列型は`Copy` trait を実装しているためエラーにならない
+    // 整数、浮動小数点、配列型は`Copy` trait を実装している
+    // moveが起きずにコピーされるためエラーにならない
     let x1 = 5;
     let x2 = x1;
     println!("{} {}", x1, x2);
