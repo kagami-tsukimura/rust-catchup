@@ -8,9 +8,10 @@ pub fn run() {
     // s1に所有権がない（s2にmove）ためアクセスできずにエラー
     // String型は`Copy` trait を実装していないため
     // println!("{}, {}", s1, s2);
+    println!("{}", s2);
 
     // 整数、浮動小数点、配列型は`Copy` trait を実装している
-    // moveが起きずにコピーされるためエラーにならない
+    // moveが起きずにスタック内で値がコピー→エラーにならない
     let x1 = 5;
     let x2 = x1;
     println!("{} {}", x1, x2);
