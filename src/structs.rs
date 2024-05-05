@@ -10,6 +10,11 @@ struct User {
     active: bool,
 }
 
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 pub fn run() {
     println!("struct.rs is start!");
 
