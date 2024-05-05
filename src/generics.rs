@@ -3,6 +3,8 @@ pub fn run() {
 
     println!("largest: {}", get_largest_i32(numbers));
 
+    // ダブルクォート: 文字列リテラル
+    // シングルクォート: char
     let chars = vec!['a', 'b', 'c', 'd', 'f', 'e'];
     println!("largest: {}", get_largest_char(chars));
 }
