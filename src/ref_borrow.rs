@@ -20,14 +20,16 @@ pub fn run() {
     let st1 = String::from("x");
     let st2 = String::from("y");
     println!("st1 = {}, st2 = {}", st1, st2);
-    // println!("longest = {}", get_longest(&st1, &st2));
+    println!("longest = {}", get_longest(&st1, &st2));
 }
 
-// // x, yどちらのライフタイムを返り値に適用するかわからないためエラー
-// fn get_longest(x: &str, y: &str) -> &str {
-//     if x.len() > y.len() {
-//         x
-//     } else {
-//         y
-//     }
-// }
+// x, yどちらのライフタイムを返り値に適用するかわからないためエラー
+// <'a>: ジェネリックライフタイムアノテーション
+// →
+fn get_longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
