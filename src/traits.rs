@@ -29,6 +29,12 @@ trait Summary {
     }
 }
 
+trait Message {
+    fn message(&self) -> String {
+        String::from("message")
+    }
+}
+
 struct NewsArticle {
     headline: String,
     location: String,
@@ -44,6 +50,13 @@ impl Summary for NewsArticle {
     //     format!("{} by {} ({})", self.headline, self.author, self.location)
     // }
 }
+// NewsArticle: Summary, Messageの2つのトレイトを保有
+impl Message for NewsArticle {
+    fn message(&self) -> String {
+        format!("{} by {} ({})", self.headline, self.author, self.location)
+    }
+}
+
 struct Tweet {
     username: String,
     content: String,
