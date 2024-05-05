@@ -29,6 +29,11 @@ pub fn run() {
     // deep copyすると値がコピーされる→所有権がmoveせずエラーを防げる
     println!("{} {}", s3, s4);
     println!("Stack address of s3, s4 is: {:p}, {:p}", &s3, &s4);
+    println!(
+        "Heap address of s3, s4 is: {:?}, {:?}\n",
+        &s3.as_ptr(),
+        &s4.as_ptr()
+    );
 
     println!("owner.rs is done!\n------");
 }
