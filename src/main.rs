@@ -4,7 +4,8 @@
 // mod pointer;
 // mod owner;
 // mod life;
-mod generics;
+// mod generics;
+mod ref_borrow;
 
 fn main() {
     // println!("Hello, world!");
@@ -24,5 +25,7 @@ fn main() {
 
     // life::run();
 
-    generics::run();
+    // generics::run();
+
+    ref_borrow::run();
 }
