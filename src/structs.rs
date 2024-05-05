@@ -20,6 +20,7 @@ impl Rectangle {
     fn create(width: u32, height: u32) -> Self {
         Self { width, height }
     }
+    // 引数で受け取ったインスタンスを使うために、"&self"で参照を取得
     fn print_area(&self) {
         println!("Area = {}", self.width * self.height)
     }
