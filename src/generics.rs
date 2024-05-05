@@ -1,8 +1,7 @@
 pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
 
-    let largest = get_largest_i32(numbers);
-    println!("largest: {}", largest);
+    println!("largest: {}", get_largest_i32(numbers));
 }
 
 fn get_largest_i32(items: Vec<i32>) -> i32 {
