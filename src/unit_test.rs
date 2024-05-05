@@ -20,3 +20,6 @@ fn greeting(name: &str) -> String {
 // testを実行するために必要
 // cargo testを実行したときのみコンパイル
 #[cfg(test)]
+mod tests {
+    // 上記の関数より1階層下に入っている
+}
