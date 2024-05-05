@@ -12,7 +12,13 @@ pub fn run() {
     let mac = OS::Mac(2001, String::from("Apple"));
 
     // マッチングパターン: switch文にあたる
-    match linux {
+    print_os_info(windows);
+    print_os_info(mac);
+    print_os_info(linux);
+}
+
+fn print_os_info(os: OS) {
+    match os {
         OS::Windows(a, b) => println!("{} {}", a, b),
         OS::Mac(a, b) => println!("{} {}", a, b),
         OS::Linux(a, b) => println!("{} {}", a, b),
