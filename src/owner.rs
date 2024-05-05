@@ -53,6 +53,16 @@ pub fn run() {
     // print_ownership(&s6);
     print_ownership(&s7);
 
+    let s8 = String::from("hello");
+    // calculate_length: &Stringで参照型のため、s8, s9ともに使用可能
+    let s9 = calculate_length(&s8);
+    println!("{}", s8);
+    println!("{}", s9);
+
+    let mut s10 = String::from("hello");
+    change(&mut s10);
+    println!("{}", s10);
+
     println!("owner.rs is done!\n------");
 }
 
@@ -77,4 +87,13 @@ fn take_giveback_ownership(s: String) -> String {
     // Rustではreturn文はない
     // 最後にセミコロンのない値をreturnとみなして返す
     s
+}
+
+fn calculate_length(s: &String) -> usize {
+    // s: &Stringで参照型のため、所有権がmoveしない
+    s.len()
+}
+
+fn change(s: &mut String) {
+    s.push_str(", world");
 }
