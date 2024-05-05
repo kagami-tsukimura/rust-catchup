@@ -81,6 +81,7 @@ pub fn run() {
     println!("article: {}", article.summarize());
 
     notify(&tweet);
+    notify(&article);
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
