@@ -21,6 +21,7 @@ impl Rectangle {
         Self { width, height }
     }
     // 引数で受け取ったインスタンスを使うために、"&self"で参照を受け取る
+    // "self"の場合、呼び出し後に再度同じインスタンスを使用できない
     fn print_area(&self) {
         println!("Area = {}", self.width * self.height)
     }
