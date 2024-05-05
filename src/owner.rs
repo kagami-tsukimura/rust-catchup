@@ -73,7 +73,7 @@ pub fn run() {
     // // immutableとmutableなref: 共存不可
     // let mut s10 = String::from("hello");
     // let r1 = &s10;
-    // //  共存不可
+    // //  データの整合性を保つため共存不可
     // let r2 = &mut s10;
     // println!("{} {} {}", s10, r1, r2);
 
