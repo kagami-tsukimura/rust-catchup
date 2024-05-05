@@ -77,6 +77,16 @@ pub fn run() {
     // let r2 = &mut s10;
     // println!("{} {} {}", s10, r1, r2);
 
+    let mut s11 = String::from("hello");
+    let r3 = &mut s11;
+    // // mutableな領域である場合、所有権者であってもエラー
+    // println!("{}", s11); // エラー
+    // println!("{}", r3);
+
+    // r3の有効期限が先に切れるためok
+    println!("{}", r3);
+    println!("{}", s11); // ok
+
     println!("owner.rs is done!\n------");
 }
 
