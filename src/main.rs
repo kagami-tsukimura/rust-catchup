@@ -8,7 +8,8 @@
 // mod ref_borrow;
 // mod structs;
 // mod enums;
-mod traits;
+// mod traits;
+mod debug;
 
 fn main() {
     // println!("Hello, world!");
@@ -36,5 +37,7 @@ fn main() {
 
     // enums::run();
 
-    traits::run();
+    // traits::run();
+
+    debug::run();
 }
