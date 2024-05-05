@@ -12,7 +12,6 @@ impl Fruits for Apple {
         "apple"
     }
 }
-
 struct Banana;
 impl Fruits for Banana {
     fn price(&self) -> u32 {
@@ -23,6 +22,9 @@ impl Fruits for Banana {
     }
 }
 
+trait Summary {
+    fn summarize(&self) -> String;
+}
 pub fn run() {
     println!("trait.rs is start!");
 
