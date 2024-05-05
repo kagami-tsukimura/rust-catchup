@@ -10,6 +10,7 @@
 // mod enums;
 // mod traits;
 mod hand;
+mod unit_test;
 // mod debug;
 
 fn main() {
