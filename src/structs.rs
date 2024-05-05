@@ -52,6 +52,7 @@ pub fn run() {
 fn build_user(email: String, username: String) -> User {
     // 受け取った引数（email, username）でUser構造体を作成
     User {
+        // 代入する値と引数の名称が同じなら、":"以降は省略可
         email,
         username,
         active: true,
