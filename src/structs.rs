@@ -40,6 +40,13 @@ pub fn run() {
     user1.sign_in_count += 1;
     // {:#?}: "#"で整形
     println!("{:#?}", user1);
+
+    let user2_email = String::from("user2@example.com");
+    let user2_username = String::from("user2");
+    println!(
+        "build_user2: {:#?}",
+        build_user(user2_email, user2_username)
+    );
 }
 
 fn build_user(email: String, username: String) -> User {
