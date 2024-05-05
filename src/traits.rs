@@ -38,6 +38,17 @@ impl Summary for NewsArticle {
         format!("{} by {} ({})", self.headline, self.author, self.location)
     }
 }
+struct Tweet {
+    username: String,
+    content: String,
+    reply: bool,
+    retweet: bool,
+}
+impl Summary for Tweet {
+    fn summarize(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
+}
 
 pub fn run() {
     println!("trait.rs is start!");
