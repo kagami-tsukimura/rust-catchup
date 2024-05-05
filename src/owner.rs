@@ -37,3 +37,5 @@ pub fn run() {
 
     println!("owner.rs is done!\n------");
 }
+
+// 変数の引数、関数の戻り値としたばあいも所有権のmoveが発生
