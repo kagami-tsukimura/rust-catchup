@@ -19,7 +19,8 @@ pub fn run() {
         active: true,
         sign_in_count: 1,
     };
-    println!("user1 = {:?}", user1);
+    // {:#?}: "#"で整形
+    println!("user1 = {:#?}", user1);
     // 構造体のような複雑なデータ型: {:?}とする
     // println!("{:?}", user1);
 
@@ -37,5 +38,6 @@ pub fn run() {
     user1.username = String::from("someusername123_update1");
     user1.active = false;
     user1.sign_in_count += 1;
-    println!("{:?}", user1);
+    // {:#?}: "#"で整形
+    println!("{:#?}", user1);
 }
