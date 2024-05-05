@@ -1,3 +1,9 @@
+// 構造体: Typeのようなもの
+struct Point {
+    x: i32,
+    y: i32,
+}
+
 pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
 
