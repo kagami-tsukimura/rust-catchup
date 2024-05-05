@@ -63,6 +63,14 @@ pub fn run() {
     get_eat(&banana);
     get_price(&apple);
     get_price(&banana);
+
+    let tweet = Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from("of course, as you probably already know, people"),
+        reply: false,
+        retweet: false,
+    };
+    println!("summarize: {}", tweet.summarize());
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
