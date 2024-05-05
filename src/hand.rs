@@ -13,14 +13,6 @@ pub fn run() {
         None => println!("Error: Division by zero."),
     }
 
-    let res1 = division_option(5.0, 0.0);
-    match res1 {
-        // 正常系: if y != 0.0
-        Some(x) => println!("Result: {:.3}", x),
-        // 異常系: if y == 0.0
-        None => println!("Error: Division by zero."),
-    }
-
     println!("hand.rs is done!\n------");
 }
 
@@ -29,5 +21,13 @@ fn division_option(x: f64, y: f64) -> Option<f64> {
         None
     } else {
         Some(x / y)
+    }
+}
+
+fn division_result(x: f64, y: f64) -> Result<f64, String> {
+    if y == 0.0 {
+        Err(String::from("Division by zero."))
+    } else {
+        Ok(x / y)
     }
 }
