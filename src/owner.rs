@@ -16,6 +16,8 @@ pub fn run() {
     let x2 = x1;
     println!("{} {}", x1, x2);
     println!("Stack address of x1, x2 is: {:p}, {:p}", &x1, &x2);
+
+    // 文字列スライス
     let sl1 = "literal";
     let sl2 = sl1;
     println!("{} {}", sl1, sl2);
