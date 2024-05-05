@@ -22,4 +22,6 @@ fn greeting(name: &str) -> String {
 #[cfg(test)]
 mod tests {
     // 上記の関数より1階層下に入っている
+    // 関数にアクセスできるようにする
+    use super::*;
 }
