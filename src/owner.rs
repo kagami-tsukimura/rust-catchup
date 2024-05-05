@@ -63,6 +63,9 @@ pub fn run() {
     change(&mut s10);
     println!("{}", s10);
 
+    // immutableなref: 複数作成可
+    // mutableなref: 複数作成不可
+
     println!("owner.rs is done!\n------");
 }
 
@@ -95,5 +98,5 @@ fn calculate_length(s: &String) -> usize {
 }
 
 fn change(s: &mut String) {
-    s.push_str(", world");
+    s.push_str("_world");
 }
