@@ -3,7 +3,8 @@
 // mod vars;
 // mod pointer;
 // mod owner;
-mod life;
+// mod life;
+mod generics;
 
 fn main() {
     // println!("Hello, world!");
@@ -21,5 +22,7 @@ fn main() {
 
     // owner::run();
 
-    life::run();
+    // life::run();
+
+    generics::run();
 }
