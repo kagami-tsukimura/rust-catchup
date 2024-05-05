@@ -19,4 +19,8 @@ pub fn run() {
     };
 
     println!("user1.email = {}", user1.email);
+
+    let user2 = user1;
+    // // 所有権: user1→user2のためエラー
+    // println!("user1 = {}", user1);
 }
