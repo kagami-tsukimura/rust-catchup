@@ -58,4 +58,11 @@ mod tests {
         // (期待値, 処理の結果)
         assert_eq!(20, double_value(10));
     }
+
+    #[test]
+    fn test_contains_name() {
+        let res = greeting("rust");
+        assert!(res.contains("rust"));
+        assert_eq!("Hello, rust!", res);
+    }
 }
