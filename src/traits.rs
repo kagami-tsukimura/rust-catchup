@@ -90,3 +90,7 @@ fn get_eat<T: Fruits>(fruits: &T) {
     // &T: 関数終了時に所有権を解放しないように参照渡し
     println!("eat is: {}", fruits.eat())
 }
+
+fn notify(item: &impl Summary) {
+    println!("notify: {}", item.summarize());
+}
