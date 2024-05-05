@@ -37,6 +37,7 @@ pub fn run() {
 
     // 関数の呼び出し
     let s5 = String::from("hello");
+    print_ownership(&s5);
     take_ownership(s5);
     // take_ownership()の中で所有権がmove→s5に所有権がなくなりエラー
     // println!("{}", s5);
@@ -47,5 +48,16 @@ pub fn run() {
 // 変数の引数、関数の戻り値とした場合も所有権のmoveが発生
 // 関数を抜ける際に戻り値(s)が解放→Heap内の実データを破棄
 fn take_ownership(s: String) {
+    // &: 所有権の借用
+    print_ownership(&s);
+}
+
+fn print_ownership(s: &String) {
+    println!("print_ownership------");
     println!("{}", s);
+    println!("Stack address of s is: {:p}", &s);
+    println!("Heap address of s is: {:?}", &s.as_ptr());
+    println!("Length of s is: {}", s.len());
+    println!("Capacity of s is: {}", s.capacity());
+    println!("------print_ownership");
 }
