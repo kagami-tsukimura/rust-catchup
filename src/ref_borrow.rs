@@ -34,6 +34,8 @@ pub fn run() {
         // printlnをスコープ内で行えば可
         // println!("{}", res2);
     }
+    // st4の実体: スコープを抜けてdrop
+    // res2のポインタが指し示す先がないためエラー
     // println!("{}", res2);
 }
 
