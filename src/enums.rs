@@ -11,7 +11,10 @@ pub fn run() {
     let windows = OS::Windows(1985, String::from("Microsoft"));
     let mac = OS::Mac(2001, String::from("Apple"));
 
-    println!("windows = {:?}", windows);
-    println!("mac = {:?}", mac);
-    println!("linux = {:?}", linux);
+    // マッチングパターン: switch文にあたる
+    match linux {
+        OS::Windows(a, b) => println!("{} {}", a, b),
+        OS::Mac(a, b) => println!("{} {}", a, b),
+        OS::Linux(a, b) => println!("{} {}", a, b),
+    }
 }
