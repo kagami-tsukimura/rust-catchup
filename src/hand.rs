@@ -21,6 +21,13 @@ pub fn run() {
         Err(e) => println!("{}", e),
     }
 
+    let a = [0, 1, 2];
+    let res3 = sum(&a);
+    match res3 {
+        Some(x) => println!("Sum: {}", x),
+        None => println!("Error: Array length is less than 3."),
+    }
+
     println!("hand.rs is done!\n------");
 }
 
