@@ -26,5 +26,15 @@ mod tests {
     use super::*;
     // テストコードを実行するために必要
     #[test]
-
+    fn test_a_is_larger() {
+        let a = Rectangle {
+            width: 5,
+            height: 5,
+        };
+        let b = Rectangle {
+            width: 3,
+            height: 3,
+        };
+        assert!(a.compare_area(&b));
+    }
 }
