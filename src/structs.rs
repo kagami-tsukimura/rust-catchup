@@ -20,8 +20,8 @@ impl Rectangle {
     fn create(width: u32, height: u32) -> Self {
         Self { width, height }
     }
-    fn area(&self) -> u32 {
-        self.width * self.height
+    fn print_area(&self) {
+        println!("Area = {}", self.width * self.height)
     }
 }
 
@@ -70,7 +70,7 @@ pub fn run() {
     let height = 20;
     let rect = Rectangle::create(width, height);
     println!("Rectangle: {:#?}", rect);
-    println!("Rectangle_Area: {:#?}", rect.area());
+    rect.print_area();
 }
 
 fn build_user(email: String, username: String) -> User {
