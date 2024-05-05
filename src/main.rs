@@ -1,6 +1,8 @@
 // mod ownership;
-mod stackover;
+// mod stackover;
 // mod vars;
+// mod pointer;
+mod owner;
 
 fn main() {
     // println!("Hello, world!");
@@ -12,5 +14,9 @@ fn main() {
 
     // ownership::run();
 
-    stackover::run();
+    // stackover::run();
+
+    // pointer::run();
+
+    owner::run();
 }
