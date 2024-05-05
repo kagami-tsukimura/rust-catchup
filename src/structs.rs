@@ -41,3 +41,13 @@ pub fn run() {
     // {:#?}: "#"で整形
     println!("{:#?}", user1);
 }
+
+fn build_user(email: String, username: String) -> User {
+    // 受け取った引数（email, username）でUser構造体を作成
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
