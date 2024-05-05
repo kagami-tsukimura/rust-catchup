@@ -25,6 +25,7 @@ impl Fruits for Banana {
 trait Summary {
     fn summarize(&self) -> String;
 }
+
 pub fn run() {
     println!("trait.rs is start!");
 
