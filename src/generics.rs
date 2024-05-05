@@ -14,6 +14,16 @@ struct PointAnother<T, U> {
     y: U,
 }
 
+// 構造体にメソッドを追加可能(implementation)
+impl<T, U> PointAnother<T, U> {
+    fn mixup<V, W>(self, other: PointAnother<V, W>) -> PointAnother<T, W> {
+        PointAnother {
+            x: self.x,
+            y: other.y,
+        }
+    }
+}
+
 pub fn run() {
     let numbers = vec![34, 50, 25, 100, 65];
 
