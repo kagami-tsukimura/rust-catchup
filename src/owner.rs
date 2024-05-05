@@ -41,6 +41,7 @@ pub fn run() {
     // Heapをそのまま引き継ぐ
     take_ownership(s5);
     // take_ownership()の中で所有権がmove→s5に所有権がなくなりエラー
+    // Heapが引き継がれたため
     // println!("{}", s5);
 
     println!("owner.rs is done!\n------");
