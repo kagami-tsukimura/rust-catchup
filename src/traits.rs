@@ -70,7 +70,6 @@ pub fn run() {
         reply: false,
         retweet: false,
     };
-
     println!("summarize: {}", tweet.summarize());
 
     let article = NewsArticle {
