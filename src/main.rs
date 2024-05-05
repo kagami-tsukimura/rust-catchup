@@ -2,7 +2,8 @@
 // mod stackover;
 // mod vars;
 // mod pointer;
-mod owner;
+// mod owner;
+mod life;
 
 fn main() {
     // println!("Hello, world!");
@@ -18,5 +19,7 @@ fn main() {
 
     // pointer::run();
 
-    owner::run();
+    // owner::run();
+
+    life::run();
 }
