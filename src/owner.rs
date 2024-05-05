@@ -38,7 +38,7 @@ pub fn run() {
     // 関数の呼び出し
     let s5 = String::from("hello");
     print_ownership(&s5);
-    // メモリ番地が変わる
+    // Heapをそのまま引き継ぐ
     take_ownership(s5);
     // take_ownership()の中で所有権がmove→s5に所有権がなくなりエラー
     // println!("{}", s5);
