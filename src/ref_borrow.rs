@@ -50,3 +50,10 @@ fn get_longest<'a>(x: &'a str, y: &'a str) -> &'a str {
         y
     }
 }
+
+fn dummy1<'a>() -> &'a str {
+    let s = String::from("dummy");
+    // s: 関数を抜ける際にdrop
+    // →referenceを返すとダングリングポインタが発生するためエラー
+    // &s
+}
