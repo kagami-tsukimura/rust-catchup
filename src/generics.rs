@@ -6,7 +6,7 @@ pub fn run() {
 
 fn get_largest_i32(items: Vec<i32>) -> i32 {
     // Vector<i32>内の最大値を取得
-    let mut largest = 0;
+    let mut largest = items[0];
     for item in items {
         if item > largest {
             largest = item;
