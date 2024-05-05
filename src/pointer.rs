@@ -1,3 +1,11 @@
+// 列挙型 enum
+enum List {
+    // (4bytes, List: コンパイラが無限に再帰でサイズ参照→エラー)
+    Node(i32, List),
+    // 0byte
+    Nil,
+}
+
 pub fn run() {
     println!("pointer.rs is start!");
     // Boxポインタ
