@@ -23,12 +23,18 @@ pub fn run() {
     println!("longest = {}", get_longest(&st1, &st2));
 
     let st3 = String::from("z");
+    // let res2;
     // ライフタイムが異なるケース
     {
         let st4 = String::from("scoped");
         let res = get_longest(&st3, &st4);
-        println!("{}", res)
+        println!("{}", res);
+        // // ダングリングポインタ: st4はスコープ抜けると解放
+        // res2 = get_longest(&st3, &st4);
+        // printlnをスコープ内で行えば可
+        // println!("{}", res2);
     }
+    // println!("{}", res2);
 }
 
 // x, yどちらのライフタイムを返り値に適用するかわからないためエラー
