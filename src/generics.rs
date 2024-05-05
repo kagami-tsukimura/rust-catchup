@@ -57,6 +57,10 @@ pub fn run() {
     // x: 文字列スライス, y: char
     let p4 = PointAnother { x: "hello", y: 'c' };
     println!("{} {}", p4.x, p4.y);
+
+    // p3.x, p4.yをmixupメソッドに渡す
+    let p5 = p3.mixup(p4);
+    println!("{} {}", p5.x, p5.y);
 }
 
 // T: 何らかの型
