@@ -17,7 +17,7 @@ pub fn run() {
     // moveが起きずにスタック内で値がコピー→エラーにならない
     println!("Stack address of x1, x2 is: {:p}, {:p}", &x1, &x2);
 
-    // 文字列スライス
+    // 文字列スライス: 値を参照
     let sl1 = "literal";
     let sl2 = sl1;
     // moveが起きずにスタック内で値がコピー→エラーにならない
