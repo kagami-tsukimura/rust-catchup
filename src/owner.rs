@@ -26,6 +26,7 @@ pub fn run() {
 
     let s3 = String::from("hello");
     let s4 = s3.clone();
+    // deep copyすると値がコピーされる→所有権がmoveせずエラーを防げる
     println!("{} {}", s3, s4);
     println!("Stack address of s3, s4 is: {:p}, {:p}", &s3, &s4);
 
