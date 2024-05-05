@@ -51,11 +51,7 @@ impl Summary for NewsArticle {
     // }
 }
 // NewsArticle: Summary, Messageの2つのトレイトを保有
-impl Message for NewsArticle {
-    fn message(&self) -> String {
-        format!("{} by {} ({})", self.headline, self.author, self.location)
-    }
-}
+impl Message for NewsArticle {}
 
 struct Tweet {
     username: String,
@@ -101,6 +97,8 @@ pub fn run() {
 
     notify(&tweet);
     notify(&article);
+
+    notify_another(&article);
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
@@ -115,4 +113,9 @@ fn get_eat<T: Fruits>(fruits: &T) {
 
 fn notify(item: &impl Summary) {
     println!("notify: {}", item.summarize());
+}
+
+fn notify_another(item: &(impl Summary + Message)) {
+    println!("notify: {}", item.summarize());
+    println!("Message!: {}", item.message());
 }
