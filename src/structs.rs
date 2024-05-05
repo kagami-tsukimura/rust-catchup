@@ -55,6 +55,7 @@ fn build_user(email: String, username: String) -> User {
         // 代入する値と引数の名称が同じなら、":"以降は省略可
         email,
         username,
+        // 固定値
         active: true,
         sign_in_count: 1,
     }
