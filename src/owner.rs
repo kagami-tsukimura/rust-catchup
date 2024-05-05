@@ -45,6 +45,7 @@ pub fn run() {
 }
 
 // 変数の引数、関数の戻り値とした場合も所有権のmoveが発生
+// 関数を抜ける際に戻り値(s)が解放→Heap内の実データを破棄
 fn take_ownership(s: String) {
     println!("{}", s);
 }
