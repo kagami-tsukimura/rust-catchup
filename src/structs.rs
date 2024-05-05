@@ -19,13 +19,13 @@ pub fn run() {
         active: true,
         sign_in_count: 1,
     };
-    println!("user1.email = {}", user1.email);
+    println!("user1 = {:?}", user1);
     // 構造体のような複雑なデータ型: {:?}とする
     // println!("{:?}", user1);
 
     // let mut user2 = user1;
     // // 所有権: user1→user2のためエラー
-    println!("user1 = {:?}", user1);
+    // println!("user1 = {:?}", user1);
 
     let mut user1 = User {
         email: String::from("someone@example.com"),
@@ -37,6 +37,5 @@ pub fn run() {
     user1.username = String::from("someusername123_update1");
     user1.active = false;
     user1.sign_in_count += 1;
-    println!("user1.email = {}", user1.email);
     println!("{:?}", user1);
 }
