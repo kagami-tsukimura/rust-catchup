@@ -25,6 +25,8 @@ pub fn run() {
     println!("Stack address of b1 is: {:p}", &b1);
     // (*b1): 参照外し→スタックの実際の値にアクセス
     (*b1).1 += " world!";
+    println!("b1.0: {}, b1.1: {}", b1.0, b1.1);
+    println!("Heap address of b1 is: {:p}", b1);
     println!("Heap memory address of b1 is: {:?}", &b1.1.as_ptr());
     println!("Len of b1 is: {}", &b1.1.len());
     println!("Capacity of b1 is: {}", &b1.1.capacity());
