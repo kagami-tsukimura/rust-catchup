@@ -79,6 +79,8 @@ pub fn run() {
         content: String::from("The Pittsburgh Penguins once again are the best team in the NHL."),
     };
     println!("article: {}", article.summarize());
+
+    notify(&tweet);
 }
 
 fn get_price<T: Fruits>(fruits: &T) {
