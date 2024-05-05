@@ -21,6 +21,7 @@ pub fn run() {
     let sl1 = "literal";
     let sl2 = sl1;
     println!("{} {}", sl1, sl2);
+    println!("Stack address of sl1, sl2 is: {:p}, {:p}", &sl1, &sl2);
 
     println!("owner.rs is done!\n------");
 }
