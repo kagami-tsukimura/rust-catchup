@@ -35,7 +35,16 @@ pub fn run() {
         &s4.as_ptr()
     );
 
+    // 関数の呼び出し
+    let s5 = String::from("hello");
+    take_ownership(s5);
+    // take_ownership()の中で所有権がmove→s5に所有権がなくなりエラー
+    // println!("{}", s5);
+
     println!("owner.rs is done!\n------");
 }
 
-// 変数の引数、関数の戻り値としたばあいも所有権のmoveが発生
+// 変数の引数、関数の戻り値とした場合も所有権のmoveが発生
+fn take_ownership(s: String) {
+    println!("{}", s);
+}
