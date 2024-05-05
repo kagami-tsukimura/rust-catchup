@@ -6,6 +6,13 @@ pub fn run() {
     // コンパイル時にサイズが決まらないデータに使用
     // ポインタ情報だけにすることで、8bytes固定のためコンパイルが通る
 
+    // Boxポインタ前：メモリ表現の確認
+    // スタック：Boxポインタ、データ、ptr(8bytes), len(8bytes), capacity(8bytes)
+    // ヒープ：データ
+    // Boxポインタ後：メモリ表現の確認
+    // スタック：Boxポインタ（heapデータのポインタ）
+    // ヒープ：データ、スタックデータ、ptr(8bytes), len(8bytes), capacity(8bytes)
+
     println!("pointer.rs is start!");
 
     println!("pointer.rs is done!\n------");
