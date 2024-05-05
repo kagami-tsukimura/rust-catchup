@@ -13,6 +13,19 @@ impl Fruits for Apple {
     }
 }
 
+struct Banana;
+impl Fruits for Banana {
+    fn price(&self) -> u32 {
+        40
+    }
+    fn eat(&self) {
+        println!("eat banana");
+    }
+}
+
 pub fn run() {
     println!("trait.rs is start!");
+
+    let apple = Apple {};
+    let banana = Banana {};
 }
